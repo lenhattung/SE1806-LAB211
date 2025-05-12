@@ -12,3 +12,10 @@ Tài liệu:
 Nộp bài:
 - https://lms-hcm.fpt.edu.vn/login/index.php
 - Enrolment key: vlmjCQA:vIU50P.4T:sR
+
+Đánh giá môn học:
+- https://github.com/lenhattung/SE1806-LAB211/blob/main/LAB211-%20Course%20Evaluation%20-%20Reward.xlsx
+
+Quy định điểm danh:
+- Sinh viên được vắng tối đa 4 buổi theo quy định.
+- Điểm danh đầu giờ (sau khi bắt đầu 5 phút).
