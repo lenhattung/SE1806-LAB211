@@ -5,4 +5,10 @@ Liên hệ:
 + www.titv.vn
 + https://www.youtube.com/watch?v=xfOp0izFnu0&list=PLyxSzL3F748401hWFgJ8gKMnN6MM8QQ7F
 
+Tài liệu:
+- https://flm.fpt.edu.vn/gui/role/teacher/SyllabusDetails?sylID=10021
+- https://github.com/lenhattung/SE1806-LAB211/
+- https://fu-edunext.fpt.edu.vn/course?id=3184
+Nộp bài:
+- https://lms-hcm.fpt.edu.vn/login/index.php
 
