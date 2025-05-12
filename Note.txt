@@ -17,19 +17,14 @@ Nộp bài:
 - https://github.com/lenhattung/SE1806-LAB211/blob/main/LAB211-%20Course%20Evaluation%20-%20Reward.xlsx
 
 Quy định điểm danh:
-- Sinh viên được vắng tối đa 4 buổi theo quy định.
+- Sinh viên được vắng tối đa 4 slot theo quy định.
 - Điểm danh đầu giờ (sau khi bắt đầu 5 phút).
 
 Zoom:
-Nhat Tung Le is inviting you to a scheduled Zoom meeting.
-
 Topic: SE1806-LAB211
-Time: May 12, 2025 10:30 AM Bangkok
-        Every week on Mon, 110 occurrence(s)
-Please download and import the following iCalendar (.ics) files to your calendar system.
 Weekly: https://uw-edu-pl.zoom.us/meeting/tJAqceirqjkpE9LU-uw9rPoWiR3Ja6eO2lMa/ics?icsToken=DN0CrVmILgy3B6-skQAALAAAALl11W0WijTbXeW0i0duJ5ft129wVfxFTMiq6Tk11jqjsb86JiCdhfLw-DtI5hdz-djJ0vMhaSezR7XkJzAwMDAwMQ&meetingMasterEventId=lsRZ-c5lQpWSp0eOfoC7gg
-Join Zoom Meeting
-https://uw-edu-pl.zoom.us/j/94761342396
-
+https;://uw-edu-pl.zoom.us/j/94761342396
 Meeting ID: 947 6134 2396
 
+Tools:
+https://sourceforge.net/projects/staruml/files/staruml/5.0/
