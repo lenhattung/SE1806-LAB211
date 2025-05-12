@@ -1,0 +1,18 @@
+R101; Sunset Suite; Deluxe; 150.00; 4; Double bed, Sofa, TV, Balcony
+R102; Ocean Breeze; Standard; 90.00; 2; Queen bed, TV, Mini-fridge
+R103; Garden View; Standard; 95.00; 2; Twin beds, TV, Desk
+R104; Mountain Retreat; Deluxe; 160.00; 3; King bed, Sofa, TV, Balcony
+R101; Duplicate Room; Standard; 100.00; 2; Queen bed, TV
+R117; Overflow Room; Suite; 220.00; 5; King bed, Sofa, TV, Jacuzzi, Balcony, Extra Chair
+R116; Incomplete Room; Deluxe; 140.00; 3
+R105; City Light; Superior; 120.00; 2; Double bed, TV, Work desk
+R106; Palm Residence; Deluxe; 155.00; 4; Queen bed, Sofa, Bathtub, TV
+R107; Horizon Room; Standard; 85.00; 2; Twin beds, TV, Mini-bar
+R108; Blue Lagoon; Suite; 200.00; 5; King bed, Sofa, TV, Jacuzzi, Balcony
+R109; Coral Room; Standard; 88.00; 2; Queen bed, TV, Coffee table
+R110; Bamboo Nest; Superior; 125.00; 3; Double bed, TV, Balcony, Mini-fridge
+R111; Starry Night; Deluxe; 145.00; 4; Queen bed, Sofa, TV, Bathtub
+R112; Seaside Corner; Standard; 92.00; 2; Twin beds, TV, Mini-bar
+R113; Golden Leaf; Superior; 130.00; 3; Queen bed, TV, Work desk, Balcony
+R114; Lavender Room; Standard; 89.00; 2; Double bed, TV, Coffee table
+R115; Pearl Suite; Suite; 210.00; 5; King bed, Sofa, Jacuzzi, Balcony, TV
