@@ -28,3 +28,6 @@ Meeting ID: 947 6134 2396
 
 Tools:
 https://sourceforge.net/projects/staruml/files/staruml/5.0/
+
+Videos:
+https://youtu.be/EBqxXJiJkZg
