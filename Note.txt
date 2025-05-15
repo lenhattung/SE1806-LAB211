@@ -27,6 +27,9 @@ https;://uw-edu-pl.zoom.us/j/94761342396
 Meeting ID: 947 6134 2396
 
 Tools:
+1.	Về tool lập trình: IDE tool là Netbeans 13
+2.	JDK: 8
+
 https://sourceforge.net/projects/staruml/files/staruml/5.0/
 
 Videos:
