@@ -33,4 +33,11 @@ Tools:
 https://sourceforge.net/projects/staruml/files/staruml/5.0/
 
 Videos:
-https://youtu.be/EBqxXJiJkZg
+Slot 1 - https://youtu.be/EBqxXJiJkZg
+Slot 2 - https://youtu.be/_g1CbA_nEWE
+
+Cộng điểm:
+–  Java Programming and Software Engineering Fundamentals Specialization - Coursera certificate  
+–  Địa chỉ: https://www.coursera.org/specializations/java-programming
+–  Sv tự học vì tương ứng với Learning outcome của môn học và hỗ trợ của GV (nếu SV yêu cầu) - 80h 
+–  Get certificate và deposit vào projects (cộng điểm vào 01 project +200 LOC)
