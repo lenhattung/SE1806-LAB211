@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package models;
 
 import java.util.Scanner;
@@ -10,11 +6,11 @@ import java.util.Scanner;
  *
  * @author tungi
  */
-public class CustomerConsoleInput {
+public class Inputter {
 
     private Scanner scanner;
 
-    public CustomerConsoleInput() {
+    public Inputter() {
         scanner = new Scanner(System.in);
     }
 
@@ -27,17 +23,50 @@ public class CustomerConsoleInput {
         return customer;
     }
 
+    public Order inputOrder() {
+        return null;
+    }
+
+    public SetMenu inputSetMenu() {
+        return null;
+    }
+
+    public String getString(String msg) {
+        System.out.println(msg);
+        return scanner.nextLine();
+    }
+
+    public int getInt(String msg) {
+        String temp = getString(msg);
+        int result = 0;
+        try {
+            result = Integer.parseInt(temp);
+        } catch (Exception e) {
+        }
+        return result;
+    }
+    
+    public double getDouble(String msg) {
+        String temp = getString(msg);
+        double result = 0;
+        try {
+            result = Double.parseDouble(temp);
+        } catch (Exception e) {
+        }
+        return result;
+    }
+
     public String input(String msg, String errorMsg, String regex) {
         String input;
         String errMsg = errorMsg;
+        boolean more = true;
         do {
-            System.out.print(msg);
-            input = scanner.nextLine();
-
-            if (!Validator.isValid(input, regex)) {
+            input = getString(msg);
+            more = !Validator.isValid(input, regex);
+            if (more) {
                 System.out.println(errMsg + ". Please re-enter...");
             }
-        } while (!Validator.isValid(input, regex));
+        } while (more);
 
         return input;
     }
