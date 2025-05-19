@@ -14,23 +14,6 @@ public class Inputter {
         scanner = new Scanner(System.in);
     }
 
-    public Customer inputCustomer() {
-        Customer customer = new Customer();
-        customer.setCustomerCode(inputCustomerCode());
-        customer.setName(inputName());
-        customer.setPhone(inputPhone());
-        customer.setEmail(inputEmail());
-        return customer;
-    }
-
-    public Order inputOrder() {
-        return null;
-    }
-
-    public SetMenu inputSetMenu() {
-        return null;
-    }
-
     public String getString(String msg) {
         System.out.println(msg);
         return scanner.nextLine();
@@ -45,7 +28,7 @@ public class Inputter {
         }
         return result;
     }
-    
+
     public double getDouble(String msg) {
         String temp = getString(msg);
         double result = 0;
@@ -71,31 +54,37 @@ public class Inputter {
         return input;
     }
 
-    public String inputCustomerCode() {
+    public Customer inputCustomer() {
+        Customer customer = new Customer();
+
         String msg = "Input Customer Code (the first character is [C,G,K], followed by 4 digits): ";
         String errorMsg = "Customer code cannot be empty! Customer code must start with C, G, K, followed by 4 digits!";
         String regex = Validator.customerCodeRegex;
-        return input(msg, errorMsg, regex);
+        customer.setCustomerCode(input(msg, errorMsg, regex));
+
+        msg = "Input name: ";
+        errorMsg = "Name cannot be empty. Name must be between 2 and 25 characters.";
+        regex = Validator.nameRegex;
+        customer.setName(input(msg, errorMsg, regex));
+
+        msg = "Input phone: ";
+        errorMsg = "Invalid phone format!";
+        regex = Validator.phoneRegex;
+        customer.setPhone(input(msg, errorMsg, regex));
+
+        msg = "Input email: ";
+        errorMsg = "Invalid email format!";
+        regex = Validator.emailRegex;
+        customer.setEmail(input(msg, errorMsg, regex));
+
+        return customer;
     }
 
-    public String inputName() {
-        String msg = "Input name: ";
-        String errorMsg = "Name cannot be empty. Name must be between 2 and 25 characters.";
-        String regex = Validator.nameRegex;
-        return input(msg, errorMsg, regex);
+    public Order inputOrder() {
+        return null;
     }
 
-    public String inputEmail() {
-        String msg = "Input email: ";
-        String errorMsg = "Invalid email format!";
-        String regex = Validator.emailRegex;
-        return input(msg, errorMsg, regex);
-    }
-
-    public String inputPhone() {
-        String msg = "Input phone: ";
-        String errorMsg = "Invalid phone format!";
-        String regex = Validator.emailRegex;
-        return input(msg, errorMsg, regex);
+    public SetMenu inputSetMenu() {
+        return null;
     }
 }
