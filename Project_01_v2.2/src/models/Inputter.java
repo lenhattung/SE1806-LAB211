@@ -80,11 +80,17 @@ public class Inputter {
         return customer;
     }
 
-    public Order inputOrder() {
+    public SetMenu inputSetMenu() {
         return null;
     }
 
-    public SetMenu inputSetMenu() {
-        return null;
+    public Order inputOrder() {
+        String msg, errorMsg, regex;
+        Order o = new Order();
+        o.setOrderId(regex);
+        o.setCustomerCode(errorMsg);
+        o.setCodeOfSetMenu(regex);
+        o.setNumberOfTables(regex);
+        o.setEventDate(eventDate);
     }
 }
