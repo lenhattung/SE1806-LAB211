@@ -37,13 +37,7 @@ public class Main {
                 case 1:
                     int option = 0;
                     do {
-                        Customer c = ip.inputCustomer();
-                        if (!customers.isDupplicate(c)) {
-                            customers.addNew(c);
-                        } else {
-                            System.out.println("Error: Customer Aldready Exists!");
-                        }
-
+                        customers.addNew(ip.inputCustomer());
                         System.out.println("1. Continue entering new customers");
                         System.out.println("2. Return to the main menu");
                         System.out.println("Enter your option: ");

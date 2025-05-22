@@ -16,20 +16,24 @@ public class Customers extends HashSet<Customer> implements Workable<Customer, S
 
     public Customers() {
     }
-    
-    public boolean isDupplicate(Customer t){
+
+    public boolean isDupplicate(Customer t) {
         //return this.contains(t);
         for (Customer c : this) {
-            if(c.getCustomerCode().equals(t.getCustomerCode())){
+            if (c.getCustomerCode().equals(t.getCustomerCode())) {
                 return true;
             }
         }
         return false;
     }
-    
+
     @Override
     public void addNew(Customer t) {
-        this.add(t);
+        if (!this.isDupplicate(t)) {
+            this.add(t);
+        } else {
+            System.out.println("Error: Customer Aldready Exists!");
+        }
     }
 
     @Override
