@@ -46,7 +46,7 @@ public class Main {
 
                         System.out.println("1. Continue entering new customers");
                         System.out.println("2. Return to the main menu");
-                        System.out.println("Entor your option: ");
+                        System.out.println("Enter your option: ");
                         option = Integer.parseInt(scanner.nextLine());
                     } while (option != 2);
                     break;
