@@ -92,8 +92,8 @@
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontFace" type="string">Courier New</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">15</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">720</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">260</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">732</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">348</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">250</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">229</XPD:ATTR>
 <XPD:REF name="Model">5/GEHLcX6UmYJnc8EXFgsQAA</XPD:REF>
@@ -125,8 +125,8 @@
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="FontFace" type="string">Courier New</XPD:ATTR>
 <XPD:ATTR name="FontSize" type="integer">15</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">712</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">36</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">720</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">20</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">274</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">229</XPD:ATTR>
 <XPD:REF name="Model">qLugKCiPg0G8DOmIIjq0OQAA</XPD:REF>
