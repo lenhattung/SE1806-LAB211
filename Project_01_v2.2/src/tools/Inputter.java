@@ -61,7 +61,7 @@ public class Inputter {
         String msg = "Input Customer Code (the first character is [C,G,K], followed by 4 digits): ";
         String errorMsg = "Customer code cannot be empty! Customer code must start with C, G, K, followed by 4 digits!";
         String regex = Acceptable.customerCodeRegex;
-        customer.setCustomerCode(input(msg, errorMsg, regex));
+        customer.setCustomerCode(input(msg, errorMsg, regex).toUpperCase());
 
         msg = "Input name: ";
         errorMsg = "Name cannot be empty. Name must be between 2 and 25 characters.";

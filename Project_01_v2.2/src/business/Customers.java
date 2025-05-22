@@ -18,13 +18,13 @@ public class Customers extends HashSet<Customer> implements Workable<Customer, S
     }
 
     public boolean isDupplicate(Customer t) {
-        //return this.contains(t);
-        for (Customer c : this) {
-            if (c.getCustomerCode().equals(t.getCustomerCode())) {
-                return true;
-            }
-        }
-        return false;
+        return this.contains(t);
+        //        for (Customer c : this) {
+        //            if (c.getCustomerCode().equals(t.getCustomerCode())) {
+        //                return true;
+        //            }
+        //        }
+        //        return false;
     }
 
     @Override
