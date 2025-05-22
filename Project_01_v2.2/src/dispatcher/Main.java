@@ -25,7 +25,7 @@ public class Main {
 
         int testCase = 10;
         do {
-            System.out.println("\n----------------------\n");
+            System.out.println("\n----------MAIN MENU------------");
             System.out.println("1. Register customers");
             System.out.println("2. Update customer information");
             System.out.println("3. Seach for customer information by name");
