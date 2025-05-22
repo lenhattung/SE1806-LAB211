@@ -5,6 +5,7 @@
 package dispatcher;
 
 import business.Customers;
+import java.util.HashSet;
 import java.util.Scanner;
 import models.Customer;
 import tools.Inputter;
@@ -37,11 +38,45 @@ public class Main {
                 case 1:
                     int option = 0;
                     do {
-                        customers.addNew(ip.inputCustomer());
+                        customers.addNew(ip.inputCustomer(false));
                         System.out.println("1. Continue entering new customers");
                         System.out.println("2. Return to the main menu");
                         System.out.println("Enter your option: ");
                         option = Integer.parseInt(scanner.nextLine());
+                    } while (option != 2);
+                    break;
+                case 2:
+                    option = 0;
+                    do {
+                        System.out.print("Enter customer code: ");
+                        String customerCode = scanner.nextLine();
+                        Customer c = customers.searchById(customerCode);
+                        if (c == null) {
+                            System.out.println("This customer does not exist.");
+                        } else {
+                            Customer customer = ip.inputCustomer(true);
+                            customer.setCustomerCode(customerCode);
+                            customers.update(customer);
+                        }
+                        System.out.println("1. Continue updating customer");
+                        System.out.println("2. Return to the main menu");
+                        System.out.println("Enter your option: ");
+                    } while (option != 2);
+                    break;
+                 case 3:
+                    option = 0;
+                    do {
+                        System.out.print("Enter customer name: ");
+                        String name = scanner.nextLine();
+                        HashSet<Customer> cs = customers.filterByName(name);
+                        if(cs.isEmpty()){
+                            System.out.println("No one matches the search criteria.");
+                        }else{
+                            customers.showAll(cs);
+                        }
+                        System.out.println("1. Continue search");
+                        System.out.println("2. Return to the main menu");
+                        System.out.println("Enter your option: ");
                     } while (option != 2);
                     break;
                 case 8:
