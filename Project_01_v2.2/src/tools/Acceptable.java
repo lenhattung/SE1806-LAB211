@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package models;
+package tools;
 
 /**
  *
  * @author tungi
  */
-public interface Validator {
+public interface Acceptable {
     public static String customerCodeRegex = "^[CGKcgk]\\d{4}$";
     public static String nameRegex = "^.{2,25}$";
     public static String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";

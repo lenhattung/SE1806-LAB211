@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controllers;
+package dispatcher;
 
 import java.util.Scanner;
 import models.Customer;
-import models.Inputter;
+import tools.Inputter;
 import models.Order;
 import models.SetMenu;
 

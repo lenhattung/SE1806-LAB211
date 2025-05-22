@@ -1,6 +1,7 @@
-package models;
+package tools;
 
 import java.util.Scanner;
+import models.Customer;
 
 /**
  *
@@ -45,7 +46,7 @@ public class Inputter {
         boolean more = true;
         do {
             input = getString(msg);
-            more = !Validator.isValid(input, regex);
+            more = !Acceptable.isValid(input, regex);
             if (more) {
                 System.out.println(errMsg + ". Please re-enter...");
             }
@@ -59,38 +60,38 @@ public class Inputter {
 
         String msg = "Input Customer Code (the first character is [C,G,K], followed by 4 digits): ";
         String errorMsg = "Customer code cannot be empty! Customer code must start with C, G, K, followed by 4 digits!";
-        String regex = Validator.customerCodeRegex;
+        String regex = Acceptable.customerCodeRegex;
         customer.setCustomerCode(input(msg, errorMsg, regex));
 
         msg = "Input name: ";
         errorMsg = "Name cannot be empty. Name must be between 2 and 25 characters.";
-        regex = Validator.nameRegex;
+        regex = Acceptable.nameRegex;
         customer.setName(input(msg, errorMsg, regex));
 
         msg = "Input phone: ";
         errorMsg = "Invalid phone format!";
-        regex = Validator.phoneRegex;
+        regex = Acceptable.phoneRegex;
         customer.setPhone(input(msg, errorMsg, regex));
 
         msg = "Input email: ";
         errorMsg = "Invalid email format!";
-        regex = Validator.emailRegex;
+        regex = Acceptable.emailRegex;
         customer.setEmail(input(msg, errorMsg, regex));
 
         return customer;
     }
 
-    public SetMenu inputSetMenu() {
-        return null;
-    }
-
-    public Order inputOrder() {
-        String msg, errorMsg, regex;
-        Order o = new Order();
-        o.setOrderId(regex);
-        o.setCustomerCode(errorMsg);
-        o.setCodeOfSetMenu(regex);
-        o.setNumberOfTables(regex);
-        o.setEventDate(eventDate);
-    }
+//    public SetMenu inputSetMenu() {
+//        return null;
+//    }
+//
+//    public Order inputOrder() {
+//        String msg, errorMsg, regex;
+//        Order o = new Order();
+//        o.setOrderId(regex);
+//        o.setCustomerCode(errorMsg);
+//        o.setCodeOfSetMenu(regex);
+//        o.setNumberOfTables(regex);
+//        o.setEventDate(eventDate);
+//    }
 }
