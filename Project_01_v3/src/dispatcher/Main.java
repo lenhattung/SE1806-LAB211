@@ -5,6 +5,7 @@
 package dispatcher;
 
 import business.Customers;
+import business.SetMenus;
 import java.util.HashSet;
 import java.util.Scanner;
 import models.Customer;
@@ -21,6 +22,7 @@ public class Main {
     public static void main(String[] args) {
         Inputter ip = new Inputter();
         Customers customers = new Customers();
+        SetMenus setmenus = new SetMenus("D:\\OneDrive\\Teaching\\FPT\\Lab211\\Set14_SU25\\De_LAB211\\01_J1.L.P0028.TraditionalFeastOrderManagement_300LOC\\FeastMenu.csv");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -30,6 +32,7 @@ public class Main {
             System.out.println("1. Register customers");
             System.out.println("2. Update customer information");
             System.out.println("3. Seach for customer information by name");
+            System.out.println("4. Display feast menu");
             System.out.println("8. Display all customers");
             System.out.println("10. Exit");
             System.out.print("Enter Test Case No. : ");
@@ -78,6 +81,10 @@ public class Main {
                         System.out.println("2. Return to the main menu");
                         System.out.println("Enter your option: ");
                     } while (option != 2);
+                    break;
+                case 4:
+                    setmenus.readFromFile();
+//                    setmenus.showAll();
                     break;
                 case 8:
                     customers.showAll();
