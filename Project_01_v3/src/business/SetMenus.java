@@ -13,7 +13,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.logging.Level;
@@ -86,9 +89,9 @@ public class SetMenus extends TreeMap<String, SetMenu> {
         System.out.println("------------------------");
         System.out.println("List of Set Menus for ordering party:");
         System.out.println("------------------------");
-        Set<String> keys = this.keySet();
-        for (String key : keys) {
-            SetMenu sm = this.get(key);
+        List<SetMenu> values =  new ArrayList(this.values());
+        Collections.sort(values);
+        for (SetMenu sm : values) {
             System.out.format("%-15s:%s\n", "Code", sm.getCode());
             System.out.format("%-15s:%s\n", "Name", sm.getName());
             System.out.format("%-15s:%s\n", "Price", sm.getPrice() + "Vnd");
