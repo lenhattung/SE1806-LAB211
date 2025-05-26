@@ -8,7 +8,7 @@ package models;
  *
  * @author tungi
  */
-public class SetMenu {
+public class SetMenu implements Comparable<SetMenu>{
     private String code;
     private String name;
     private double price;
@@ -55,6 +55,14 @@ public class SetMenu {
     public void setIngradients(String ingradients) {
         this.ingradients = ingradients;
     }
-    
-    
+
+    @Override
+    public int compareTo(SetMenu that) {
+        if(this.price<that.price)
+            return -1;
+        else if(this.price> that.price)
+            return 1;
+        else 
+            return 0;
+    }
 }

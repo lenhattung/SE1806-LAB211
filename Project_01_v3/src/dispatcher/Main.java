@@ -66,15 +66,15 @@ public class Main {
                         System.out.println("Enter your option: ");
                     } while (option != 2);
                     break;
-                 case 3:
+                case 3:
                     option = 0;
                     do {
                         System.out.print("Enter customer name: ");
                         String name = scanner.nextLine();
                         HashSet<Customer> cs = customers.filterByName(name);
-                        if(cs.isEmpty()){
+                        if (cs.isEmpty()) {
                             System.out.println("No one matches the search criteria.");
-                        }else{
+                        } else {
                             customers.showAll(cs);
                         }
                         System.out.println("1. Continue search");
@@ -83,8 +83,12 @@ public class Main {
                     } while (option != 2);
                     break;
                 case 4:
-                    setmenus.readFromFile();
-//                    setmenus.showAll();
+                    try {
+                        setmenus.readFromFile();
+                    } catch (Exception e) {
+                    }
+
+                    setmenus.showAll();
                     break;
                 case 8:
                     customers.showAll();
