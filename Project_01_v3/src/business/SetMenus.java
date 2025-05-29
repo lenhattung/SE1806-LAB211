@@ -32,7 +32,12 @@ public class SetMenus extends TreeMap<String, SetMenu> {
     private String pathFile;
 
     public SetMenus(String pathFile) {
-        this.pathFile = pathFile;
+        try {
+            this.pathFile = pathFile;
+            this.readFromFile();
+        } catch (IOException ex) {
+            Logger.getLogger(SetMenus.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void readFromFile() throws IOException {
@@ -99,5 +104,13 @@ public class SetMenus extends TreeMap<String, SetMenu> {
             System.out.println(sm.getIngradients());
             System.out.println("------------------------");
         }
+    }
+    
+    public SetMenu searchById(String id){
+        return this.get(id);
+    }
+    
+    public boolean contains(String id){
+        return this.containsKey(id);
     }
 }

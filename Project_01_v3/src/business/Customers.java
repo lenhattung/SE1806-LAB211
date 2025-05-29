@@ -15,6 +15,17 @@ import tools.Inputter;
 public class Customers extends HashSet<Customer> implements Workable<Customer, String> {
 
     public Customers() {
+         // Tạo sẵn một số customer mẫu
+        this.add(new Customer("C0001", "Nguyen Van An", "0901234567", "nguyenvanan@gmail.com"));
+        this.add(new Customer("G0002", "Tran Thi Binh", "0912345678", "tranthibinh@yahoo.com"));
+        this.add(new Customer("K0003", "Le Van Cuong", "0923456789", "levancuong@hotmail.com"));
+        this.add(new Customer("C0004", "Pham Thi Dung", "0934567890", "phamthidung@outlook.com"));
+        this.add(new Customer("G0005", "Hoang Van Em", "0945678901", "hoangvanem@gmail.com"));
+        this.add(new Customer("K0006", "Vu Thi Fang", "0956789012", "vuthifang@yahoo.com"));
+        this.add(new Customer("C0007", "Dao Van Giang", "0967890123", "daovangiang@gmail.com"));
+        this.add(new Customer("G0008", "Bui Thi Hoa", "0978901234", "buithihoa@hotmail.com"));
+        this.add(new Customer("K0009", "Ly Van Inh", "0989012345", "lyvaninh@outlook.com"));
+        this.add(new Customer("C0010", "Do Thi Kim", "0990123456", "dothikim@gmail.com"));
     }
 
     public boolean isDupplicate(Customer t) {

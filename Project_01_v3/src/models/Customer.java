@@ -85,5 +85,13 @@ public class Customer {
         }
         final Customer other = (Customer) obj;
         return Objects.equals(this.customerCode, other.customerCode);
+
     }
-  }
+
+    public void display() {
+        System.out.format("%-18s:%s\n", "Customer code:", this.getCustomerCode());
+        System.out.format("%-18s:%s\n", "Customer name:", this.getName());
+        System.out.format("%-18s:%s\n", "Phone number:", this.getPhone());
+        System.out.format("%-18s:%s\n", "Email:", this.getEmail());
+    }
+}
