@@ -4,7 +4,12 @@
  */
 package business;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.HashSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import models.Customer;
 import tools.Inputter;
 
@@ -14,20 +19,15 @@ import tools.Inputter;
  */
 public class Customers extends HashSet<Customer> implements Workable<Customer, String> {
 
-    public Customers() {
-         // Tạo sẵn một số customer mẫu
-        this.add(new Customer("C0001", "Nguyen Van An", "0901234567", "nguyenvanan@gmail.com"));
-        this.add(new Customer("G0002", "Tran Thi Binh", "0912345678", "tranthibinh@yahoo.com"));
-        this.add(new Customer("K0003", "Le Van Cuong", "0923456789", "levancuong@hotmail.com"));
-        this.add(new Customer("C0004", "Pham Thi Dung", "0934567890", "phamthidung@outlook.com"));
-        this.add(new Customer("G0005", "Hoang Van Em", "0945678901", "hoangvanem@gmail.com"));
-        this.add(new Customer("K0006", "Vu Thi Fang", "0956789012", "vuthifang@yahoo.com"));
-        this.add(new Customer("C0007", "Dao Van Giang", "0967890123", "daovangiang@gmail.com"));
-        this.add(new Customer("G0008", "Bui Thi Hoa", "0978901234", "buithihoa@hotmail.com"));
-        this.add(new Customer("K0009", "Ly Van Inh", "0989012345", "lyvaninh@outlook.com"));
-        this.add(new Customer("C0010", "Do Thi Kim", "0990123456", "dothikim@gmail.com"));
+    private boolean saved;
+    private String pathFile;
+
+    public Customers(String pathFile) {
+        this.pathFile = pathFile;
+        this.saved = false;
     }
 
+    
     public boolean isDupplicate(Customer t) {
         return this.contains(t);
         //        for (Customer c : this) {
@@ -42,6 +42,7 @@ public class Customers extends HashSet<Customer> implements Workable<Customer, S
     public void addNew(Customer t) {
         if (!this.isDupplicate(t)) {
             this.add(t);
+            this.saved = false;
         } else {
             System.out.println("Error: Customer Aldready Exists!");
         }
@@ -51,6 +52,7 @@ public class Customers extends HashSet<Customer> implements Workable<Customer, S
     public void update(Customer t) {
         this.remove(t);
         this.add(t);
+        this.saved = false;
     }
 
     @Override
@@ -88,5 +90,44 @@ public class Customers extends HashSet<Customer> implements Workable<Customer, S
             }
         }
         return result;
+    }
+
+    public void saveToFile() {
+        // -- 0. Neu da luu roi thi khong luu nua
+        if (this.saved) {
+            return;
+        }
+
+        FileOutputStream fos = null;
+        try {
+            //-- 1. Tao File object
+            File f = new File(this.pathFile);
+            if (!f.exists()) {
+                f.createNewFile();
+            }
+
+            //-- 2. Tao FileutputStream
+            fos = new FileOutputStream(f);
+
+            //-- 3. Tao oos
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+            //-- 4. Ghi file
+            for (Customer c : this) {
+                oos.writeObject(c);
+            }
+            //-- 5. Dong cac objcet
+            oos.close();
+            //--6. Thay doi trang thai cua saved
+            this.saved = true;
+        } catch (Exception e) {
+            Logger.getLogger(Customers.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+            try {
+                fos.close();
+            } catch (Exception e) {
+                Logger.getLogger(Customers.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
     }
 }

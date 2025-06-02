@@ -6,6 +6,7 @@ package models;
 
 import business.Customers;
 import business.SetMenus;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.Objects;
  *
  * @author tungi
  */
-public class Order {
+public class Order implements Serializable{
 
     private String orderId;
     private String customerCode;

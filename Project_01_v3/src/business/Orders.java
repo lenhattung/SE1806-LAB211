@@ -38,4 +38,8 @@ public class Orders extends ArrayList<Order> implements Workable<Order, String>{
     public boolean isDupplicated(Order o){
         return this.contains(o);
     }
+
+    public void saveToFile() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

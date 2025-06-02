@@ -23,7 +23,7 @@ public class Main {
 
     public static void main(String[] args) {
         Inputter inputter = new Inputter();
-        Customers customers = new Customers();
+        Customers customers = new Customers("customers.dat");
         Orders orders = new Orders();
         SetMenus setmenus = new SetMenus("D:\\OneDrive\\Teaching\\FPT\\Lab211\\Set14_SU25\\De_LAB211\\01_J1.L.P0028.TraditionalFeastOrderManagement_300LOC\\FeastMenu.csv");
 
@@ -104,6 +104,11 @@ public class Main {
                         order.display(customers, setmenus);
                     }
 
+                    break;
+                case 7:
+                    customers.saveToFile();
+                    //orders.saveToFile();
+                    System.out.println("The data is successfully saved!");
                     break;
                 case 8:
                     customers.showAll();
