@@ -40,7 +40,7 @@ public class Main {
             System.out.println("6. ");
             System.out.println("7. Save data to file");
             System.out.println("8. Display all customers");
-            System.out.println("10. Exit");
+            System.out.println("9. Exit");
             System.out.print("Enter Test Case No. : ");
             testCase = Integer.parseInt(scanner.nextLine());
             switch (testCase) {
