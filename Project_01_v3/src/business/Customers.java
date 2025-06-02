@@ -4,13 +4,19 @@
  */
 package business;
 
+import java.io.EOFException;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import models.Customer;
+import models.Order;
 import tools.Inputter;
 
 /**
@@ -24,10 +30,9 @@ public class Customers extends HashSet<Customer> implements Workable<Customer, S
 
     public Customers(String pathFile) {
         this.pathFile = pathFile;
-        this.saved = false;
+        this.readFromFile();
     }
 
-    
     public boolean isDupplicate(Customer t) {
         return this.contains(t);
         //        for (Customer c : this) {
@@ -127,6 +132,44 @@ public class Customers extends HashSet<Customer> implements Workable<Customer, S
                 fos.close();
             } catch (Exception e) {
                 Logger.getLogger(Customers.class.getName()).log(Level.SEVERE, null, e);
+            }
+        }
+    }
+
+    public void readFromFile() {
+        FileInputStream fis = null;
+        try {
+            // B1 - Tao doi tuong file de anh xa len tap tin
+            File f = new File(this.pathFile);
+            // B2 - Kiem tra su ton tai cua file
+            if (!f.exists()) {
+                System.out.println("Cannot read data from " + this.pathFile + ". Please check it.");
+                return;
+            } else {
+                // B3 - Tao fis
+                fis = new FileInputStream(f);
+                // B4 - Tap ois
+                ObjectInputStream ois = new ObjectInputStream(fis);
+                // B5 - Doc tung doi tuong
+                try {
+                    while (true) {
+                        Object o = ois.readObject();
+                        Customer customer = (Customer) o;
+                        this.addNew(customer);
+                    }
+                } catch (Exception e) {
+                }
+            }
+        } catch (FileNotFoundException e1) {
+            Logger.getLogger(SetMenus.class.getName()).log(Level.SEVERE, null, e1);
+        } catch (IOException e2) {
+            Logger.getLogger(SetMenus.class.getName()).log(Level.SEVERE, null, e2);
+        } catch (Exception e4) {
+            Logger.getLogger(SetMenus.class.getName()).log(Level.SEVERE, null, e4);
+        } finally {
+            try {
+                fis.close();
+            } catch (Exception ex) {
             }
         }
     }

@@ -109,11 +109,19 @@ public class Main {
                     break;
                 case 7:
                     customers.saveToFile();
-                    //orders.saveToFile();
+                    orders.saveToFile();
                     System.out.println("The data is successfully saved!");
                     break;
                 case 8:
-                    customers.showAll();
+                    Customers customers_temp = new Customers("customers.dat");
+                    Orders orders_temp = new Orders("feast_order_service.dat");
+                    if (customers_temp.size() > 0) {
+                        customers_temp.showAll();
+                    } else if (orders_temp.size() > 0) {
+                        orders_temp.showAll();
+                    } else {
+                        System.out.println("No data in the system!");
+                    }
                     break;
                 default:
                     throw new AssertionError();
