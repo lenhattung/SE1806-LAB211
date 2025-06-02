@@ -24,7 +24,7 @@ public class Main {
     public static void main(String[] args) {
         Inputter inputter = new Inputter();
         Customers customers = new Customers("customers.dat");
-        Orders orders = new Orders();
+        Orders orders = new Orders("feast_order_service.dat");
         SetMenus setmenus = new SetMenus("D:\\OneDrive\\Teaching\\FPT\\Lab211\\Set14_SU25\\De_LAB211\\01_J1.L.P0028.TraditionalFeastOrderManagement_300LOC\\FeastMenu.csv");
 
         Scanner scanner = new Scanner(System.in);
@@ -37,6 +37,8 @@ public class Main {
             System.out.println("3. Seach for customer information by name");
             System.out.println("4. Display feast menu");
             System.out.println("5. Place a feast order");
+            System.out.println("6. ");
+            System.out.println("7. Save data to file");
             System.out.println("8. Display all customers");
             System.out.println("10. Exit");
             System.out.print("Enter Test Case No. : ");
