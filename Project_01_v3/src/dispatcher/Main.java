@@ -68,7 +68,7 @@ public class Main {
     }
 
     private static void runMainMenu() {
-        int testCase = EXIT;
+        int testCase;
         do {
             displayMainMenu();
             testCase = getMenuChoice();
@@ -77,7 +77,7 @@ public class Main {
     }
 
     private static void handleCustomerRegistration() {
-        int option = 0;
+        int option;
         do {
             customers.addNew(inputter.inputCustomer(false));
             System.out.println("1. Continue entering new customers");
@@ -88,7 +88,7 @@ public class Main {
     }
 
     private static void handleCustomerUpdate() {
-        int option = 0;
+        int option;
         do {
             System.out.print("Enter customer code: ");
             String customerCode = scanner.nextLine();
@@ -103,6 +103,7 @@ public class Main {
             System.out.println("1. Continue updating customer");
             System.out.println("2. Return to the main menu");
             System.out.println("Enter your option: ");
+            option = Integer.parseInt(scanner.nextLine());
         } while (option != RETURN_TO_MAIN);
     }
 
@@ -151,12 +152,12 @@ public class Main {
     }
 
     private static void handleDisplayAll() {
-        Customers customers = new Customers(CUSTOMERS_FILE);
-        Orders orders= new Orders(ORDERS_FILE);
-        if (customers.size() > 0) {
-            customers.showAll();
-        } else if (orders.size() > 0) {
-            orders.showAll();
+        Customers customers2 = new Customers(CUSTOMERS_FILE);
+        Orders orders2= new Orders(ORDERS_FILE);
+        if (!customers2.isEmpty()) {
+            customers2.showAll();
+        } else if (!orders2.isEmpty()) {
+            orders2.showAll();
         } else {
             System.out.println("No data in the system!");
         }
