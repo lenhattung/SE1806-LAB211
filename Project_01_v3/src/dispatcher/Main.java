@@ -29,7 +29,6 @@ public class Main {
     private static final int DISPLAY_ALL = 8;
     private static final int EXIT = 9;
 
-    private static final int CONTINUE_OPTION = 1;
     private static final int RETURN_TO_MAIN = 2;
 
     private static final String CUSTOMERS_FILE = "customers.dat";
@@ -104,7 +103,7 @@ public class Main {
             System.out.println("1. Continue updating customer");
             System.out.println("2. Return to the main menu");
             System.out.println("Enter your option: ");
-        } while (option != 2);
+        } while (option != RETURN_TO_MAIN);
     }
 
     private static void handleCustomerSearch() {
@@ -121,7 +120,7 @@ public class Main {
             System.out.println("1. Continue search");
             System.out.println("2. Return to the main menu");
             System.out.println("Enter your option: ");
-        } while (option != 2);
+        } while (option != RETURN_TO_MAIN);
     }
 
     private static void handleMenuDisplay() {
@@ -152,12 +151,12 @@ public class Main {
     }
 
     private static void handleDisplayAll() {
-        Customers customers_temp = new Customers("customers.dat");
-        Orders orders_temp = new Orders("feast_order_service.dat");
-        if (customers_temp.size() > 0) {
-            customers_temp.showAll();
-        } else if (orders_temp.size() > 0) {
-            orders_temp.showAll();
+        Customers customers = new Customers(CUSTOMERS_FILE);
+        Orders orders= new Orders(ORDERS_FILE);
+        if (customers.size() > 0) {
+            customers.showAll();
+        } else if (orders.size() > 0) {
+            orders.showAll();
         } else {
             System.out.println("No data in the system!");
         }
